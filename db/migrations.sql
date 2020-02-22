@@ -12,12 +12,23 @@ CREATE TABLE users(
 CREATE TABLE trips(
     id SERIAL PRIMARY KEY,
     name VARCHAR(128) NOT NULL,
+<<<<<<< Updated upstream
     user_id INTEGER REFERENCES users(id) ON DELETE CASCADE
 );
 
 CREATE TABLE stops(
     id SERIAL PRIMARY KEY,
     name VARCHAR(256)
+=======
+    user_id INTEGER REGERENCES users(id) ON DELETE CASCADE
+);
+
+CREATE TABLE stops(
+    id SERIEAL PRIMARY KEY,
+    name VARCHAR(256),
+    address VARCHAR(512),
+    lat_long VARCHAR(256)
+>>>>>>> Stashed changes
 );
 
 CREATE TABLE bookings(
